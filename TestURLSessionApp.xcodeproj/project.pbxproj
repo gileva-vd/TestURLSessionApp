@@ -13,6 +13,7 @@
 		F926DA492949028F008A4798 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F926DA472949028F008A4798 /* Main.storyboard */; };
 		F926DA4B29490291008A4798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F926DA4A29490291008A4798 /* Assets.xcassets */; };
 		F926DA4E29490291008A4798 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F926DA4C29490291008A4798 /* LaunchScreen.storyboard */; };
+		F926DA5A29490CBF008A4798 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926DA5929490CBF008A4798 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F926DA4A29490291008A4798 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F926DA4D29490291008A4798 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F926DA4F29490291008A4798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F926DA5929490CBF008A4798 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		F926DA402949028F008A4798 /* TestURLSessionApp */ = {
 			isa = PBXGroup;
 			children = (
-				F926DA412949028F008A4798 /* AppDelegate.swift */,
-				F926DA432949028F008A4798 /* SceneDelegate.swift */,
-				F926DA452949028F008A4798 /* ViewController.swift */,
-				F926DA472949028F008A4798 /* Main.storyboard */,
-				F926DA4A29490291008A4798 /* Assets.xcassets */,
-				F926DA4C29490291008A4798 /* LaunchScreen.storyboard */,
-				F926DA4F29490291008A4798 /* Info.plist */,
+				F926DA5B29490CC9008A4798 /* Models */,
+				F926DA5529490327008A4798 /* App */,
+				F926DA5629490366008A4798 /* ViewControllers */,
+				F926DA5729490380008A4798 /* Storyboards */,
+				F926DA5829490393008A4798 /* Resources */,
 			);
 			path = TestURLSessionApp;
+			sourceTree = "<group>";
+		};
+		F926DA5529490327008A4798 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F926DA4F29490291008A4798 /* Info.plist */,
+				F926DA412949028F008A4798 /* AppDelegate.swift */,
+				F926DA432949028F008A4798 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F926DA5629490366008A4798 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F926DA452949028F008A4798 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F926DA5729490380008A4798 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F926DA4C29490291008A4798 /* LaunchScreen.storyboard */,
+				F926DA472949028F008A4798 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F926DA5829490393008A4798 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F926DA4A29490291008A4798 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F926DA5B29490CC9008A4798 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F926DA5929490CBF008A4798 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F926DA5A29490CBF008A4798 /* User.swift in Sources */,
 				F926DA462949028F008A4798 /* ViewController.swift in Sources */,
 				F926DA422949028F008A4798 /* AppDelegate.swift in Sources */,
 				F926DA442949028F008A4798 /* SceneDelegate.swift in Sources */,
@@ -289,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZRTD52285X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TestURLSessionApp/Info.plist;
+				INFOPLIST_FILE = TestURLSessionApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -302,9 +346,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "gileva-vd.TestURLSessionApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,7 +364,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZRTD52285X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TestURLSessionApp/Info.plist;
+				INFOPLIST_FILE = TestURLSessionApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -330,9 +377,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "gileva-vd.TestURLSessionApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
